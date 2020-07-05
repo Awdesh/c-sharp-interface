@@ -7,6 +7,8 @@ namespace c_sharp_interface
         public int MaxVolume => 60;
         public string Device { get; }
 
+        public event Action<string> OnVolumeChange = (message) => Console.WriteLine(message);
+
         public Tv(string device)
         {
             Device = device;
@@ -19,7 +21,8 @@ namespace c_sharp_interface
 
         public void AdjustVolume()
         {
-            Console.WriteLine($"=> Max limit is {MaxVolume}. You can adjust volume using volume button.\n");
+            Console.WriteLine("=> You can adjust volume using volume button.");
+            OnVolumeChange($"Make sure you are not going above {MaxVolume}.\n");
         }
 
         public void PowerOn()
