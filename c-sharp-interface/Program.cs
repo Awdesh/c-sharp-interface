@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace c_sharp_interface
 {
@@ -13,9 +14,14 @@ namespace c_sharp_interface
 
         static void Main(string[] args)
         {
-            ExecuteCalls(new Tv("TV"));
-            ExecuteCalls(new MusicPlayer("Music Player"));
-            ExecuteCalls(new PremiumMusicPlayer("Premium Music Player"));
+            List<IRemote> devices = new List<IRemote>
+            {
+                new Tv("TV"),
+                new MusicPlayer("Music Player"),
+                new PremiumMusicPlayer("Premium Music Player")
+            };
+
+            devices.ForEach(device => ExecuteCalls(device));
 
             Console.ReadLine();
         }

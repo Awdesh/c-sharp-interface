@@ -10,8 +10,6 @@ namespace c_sharp_interface
         public MusicPlayer(string device)
         {
             Device = device;
-            Console.WriteLine($"{Device}");
-            Console.WriteLine("-----------------");
         }
 
         public virtual void AdjustVolume()
@@ -26,6 +24,8 @@ namespace c_sharp_interface
 
         public void PowerOn()
         {
+            Console.WriteLine($"{Device}");
+            Console.WriteLine("-----------------");
             Console.WriteLine($"=> Turned on {Device}\n");
         }
 
