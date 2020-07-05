@@ -9,12 +9,14 @@ namespace c_sharp_interface
             // Check Type of the object using Reflection
             Console.WriteLine(remote.GetType());
             remote.AdjustVolume();
+
         }
 
         static void Main(string[] args)
         {
             ChangeVolume(new Tv());
             ChangeVolume(new MusicPlayer());
+            ChangeVolume(new PremiumMusicPlayer());
 
             Console.ReadLine();
         }
