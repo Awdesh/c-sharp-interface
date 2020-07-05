@@ -1,5 +1,5 @@
 # Interfaces in C-Sharp
-My Observations while using Interface in C#
+My experiments with Interface in C#
 
 ## What is an Interface?
 - Interface defines a Contract. 
