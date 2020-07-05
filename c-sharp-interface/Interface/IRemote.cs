@@ -7,10 +7,4 @@
         // Function to raise volume
         void AdjustVolume();
     }
-
-    public interface ITvRemote: IRemote
-    {
-        void AdjustBrightness();
-    }
-
 }

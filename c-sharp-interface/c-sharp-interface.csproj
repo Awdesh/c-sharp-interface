@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Interface\IRemote.cs" />
     <Compile Include="Class\MusicPlayer.cs" />
+    <Compile Include="Interface\ITvRemote.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Class\Tv.cs" />
