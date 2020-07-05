@@ -5,15 +5,34 @@ namespace c_sharp_interface
     class Tv : ITvRemote
     {
         public int MaxVolume => 60;
+        public string Device { get; }
+
+        public Tv(string device)
+        {
+            Device = device;
+            Console.WriteLine($"{Device}");
+            Console.WriteLine("-----------------");
+        }
 
         public void AdjustBrightness()
         {
-            Console.WriteLine("---> Adjusting Brightness using a button.\n");
+            Console.WriteLine("=> Adjusting Brightness using a button.\n");
         }
 
         public void AdjustVolume()
         {
-            Console.WriteLine("---> Adjusting Volume using volume button.\n");
+            Console.WriteLine($"=> Max limit is {MaxVolume}. You can adjust volume using volume button.\n");
+        }
+
+        public void PowerOn()
+        {
+            Console.WriteLine($"=> Turned on {Device}\n");
+        }
+
+        public void PowerOff()
+        {
+            Console.WriteLine($"=> Turned off {Device}\n");
+            Console.WriteLine();
         }
     }
 }

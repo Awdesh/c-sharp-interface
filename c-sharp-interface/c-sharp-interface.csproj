@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\PremiumMusicPlayer.cs" />
     <Compile Include="Interface\IRemote.cs" />
     <Compile Include="Class\MusicPlayer.cs" />
     <Compile Include="Interface\ITuner.cs" />

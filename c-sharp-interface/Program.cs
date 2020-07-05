@@ -4,19 +4,18 @@ namespace c_sharp_interface
 {
     class Program
     {
-        private static void ChangeVolume(IRemote remote)
+        private static void ExecuteCalls(IRemote remote)
         {
-            // Check Type of the object using Reflection
-            Console.WriteLine(remote.GetType());
+            remote.PowerOn();
             remote.AdjustVolume();
-
+            remote.PowerOff();
         }
 
         static void Main(string[] args)
         {
-            ChangeVolume(new Tv());
-            ChangeVolume(new MusicPlayer());
-            ChangeVolume(new PremiumMusicPlayer());
+            ExecuteCalls(new Tv("TV"));
+            ExecuteCalls(new MusicPlayer("Music Player"));
+            ExecuteCalls(new PremiumMusicPlayer("Premium Music Player"));
 
             Console.ReadLine();
         }

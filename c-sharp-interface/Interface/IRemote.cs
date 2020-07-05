@@ -3,8 +3,9 @@
     public interface IRemote
     {
         int MaxVolume { get; }
-
-        // Function to raise volume
+        string Device { get; }
         void AdjustVolume();
+        void PowerOn();
+        void PowerOff();
     }
 }
